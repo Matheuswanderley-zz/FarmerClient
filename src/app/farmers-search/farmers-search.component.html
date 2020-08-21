@@ -1,0 +1,7 @@
+<input type="text"  [(ngModel)]="searchQuery" placeholder="Search for Farmers..." autofocus/>
+<button (click)="searchFarmers(searchQuery)" type="button">Find Farmers </button>
+<div *ngFor="let farmer of farmers">
+  <p>{{ farmer?.name }}</p>
+<p>{{ farmer?.document.number }}</p>  
+<p>{{ farmer?.address.street}} {{farmer?.address.address}} {{ farmer?.address.state}}</p>
+</div>
